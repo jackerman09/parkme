@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Get My Car" %></title>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
@@ -13,22 +13,39 @@
   </head>
 
   <body>
-
-    <div id="user_nav">
     <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to 'Edit profile', edit_user_registration_path %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign up", new_user_registration_path %> |
-      <%= link_to "Login", new_user_session_path %>
+      <!-- for dev purposes only -->
+      {Logged in as <strong><%= current_user.email %></strong>}
     <% end %>
-    </div>
+
+    <% if user_signed_in? %>
+    <!-- Nav bar -->
+      <nav class="top-bar" data-topbar role="navigation">
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+              <li class=''><%= link_to 'Edit profile', edit_user_registration_path, { class: ''} %></li>
+              <li class=''><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          </ul>
+        </section>
+      </nav>
+    <% end %>
 
     <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, id: "flash_#{name}" %>
+      <div class='row'>
+        <div class='small-8 small-centered columns'>
+          <div data-alert class="alert-box secondary radius">
+            <%= msg %>
+            <a href="#" class="close">&times;</a>
+          </div>
+        </div>
+      </div>
     <% end %>
 
     <%= yield %>
+
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>
