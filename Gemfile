@@ -47,6 +47,9 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Devise
+gem 'devise'
+
 # Use heroku
 gem 'rails_12factor', group: :production
 
