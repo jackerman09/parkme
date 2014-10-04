@@ -21,6 +21,9 @@ gem 'jquery-rails'
 gem 'ember-rails'
 gem 'ember-source'
 
+# Foundation
+gem 'foundation-rails'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -33,6 +36,9 @@ group :development do
 	# Better errors
 	gem 'better_errors'
 	gem 'binding_of_caller'
+
+	# Pry
+	gem 'pry-rails'
 end
 
 # Use ActiveModel has_secure_password
