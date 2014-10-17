@@ -24,6 +24,9 @@ gem 'ember-source'
 # Foundation
 gem 'foundation-rails'
 
+# Active Admin
+gem 'activeadmin'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
