@@ -17,6 +17,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+# Use Thin as the web server
+gem 'thin'
+
 # Ember
 gem 'ember-rails'
 gem 'ember-source'
