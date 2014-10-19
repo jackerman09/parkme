@@ -1,10 +1,16 @@
 setup:
 	- cancancan
    - roles
-	- rspec
-  - switch webserver from webrick to thin
-  - active admin
+	- active admin
+  - rspec
+
+schema:
+ - Company
+ - Garage (nested route under Company)
+ - Car (many-to-many with User and Garage)
+ - Appointments (has_one car)
 
 did that shit:
  - devise
  - foundation
+ - switch webserver from webrick to thin
