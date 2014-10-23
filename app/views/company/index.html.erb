@@ -1,0 +1,9 @@
+<h1>Company#index</h1>
+
+<% @companies.each do |c| %>
+	<p><%= c.name %></p>
+	<% c.garages.each do |g| %>
+		<p><%= g.name %></p>
+	<% end %>
+<% end %>
+
