@@ -28,9 +28,9 @@ gem 'ember-source'
 gem 'foundation-rails'
 
 # Active Admin
-gem 'responders', '~> 1.0.0.rc'
-gem 'inherited_resources', '~> 1.4.1'
-gem 'activeadmin', github: 'activeadmin'
+# gem 'responders', '~> 1.0.0.rc'
+# gem 'inherited_resources', '~> 1.4.1'
+# gem 'activeadmin', github: 'activeadmin'
 # gem 'activeadmin', github: 'gregbell/active_admin'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
