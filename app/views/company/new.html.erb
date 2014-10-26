@@ -1,0 +1,18 @@
+<h1>Update your profile</h1>
+
+<div class='row'>
+  <div class='small-4 small-centered columns'>
+    <%# form_for(@company) do |f| %>
+      
+      <%# f.label :name %>
+      <%# f.text_field :name %>
+
+      <%# f.submit "Save changes", class: "button" %>
+    <%# end %>
+    <%= form_for @company, url: {action: "create"}, html: {class: ''} do |f| %>
+      <%= render 'shared/error_messages', object: @company %>
+      <%= f.text_field :name, placeholder: 'Name' %>
+      <%= f.submit "Create" %>
+    <% end %>
+  </div>
+</div>

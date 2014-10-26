@@ -1,3 +1,8 @@
-<h1>Company#show</h1>
-
-<%= @company.name %>
+<div class='row'>
+	<div class='small-12 columns'>
+		<h1><%= @company.name %></h1>
+		<% @company.garages.each do |g| %>
+			<h5><%= g.name %></h5>
+		<% end %>
+	</div>
+</div>
